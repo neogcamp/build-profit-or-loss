@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Profile & Loss Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Stock Profile & Loss Calculator</h1>
+    </header>
+    <main>
+      <div class="left-div">
+        <div class="input">
+          <p class="flt-label">Stock Price</p>
+          <input class="input-txt" type="number" id="users-stock-price" />
+        </div>
+        <div class="input">
+          <p class="flt-label">Quantity of Stock</p>
+          <input class="input-txt" type="number" id="quantity-of-stock" />
+        </div>
+        <div class="input">
+          <p class="flt-label">Current Price</p>
+          <input class="input-txt" type="number" id="current-stock-price" />
+        </div>
+        <div>
+          <button class="btn" id="btn-check">Calculate</button>
+        </div>
+        <p class="output" id="output"></p>
+      </div>
+      <div>
+        <img id="stock-img" src="./images/stocks.png" alt="" />
+      </div>
+    </main>
+    <footer>
+      <p>© | 2021 | adarshbalika</p>
+      <ul class="list-unordered inline-list">
+        <li>
+          <a class="links" href="https://github.com/neogcamp/" target="_blank">
+            <img src="images/github.svg" alt="github" />
+          </a>
+        </li>
+        <li>
+          <a class="links" href="https://bit.ly/tanaydiscord" target="_blank">
+            <img src="images/discord.svg" alt="discord" />
+          </a>
+        </li>
+        <li>
+          <a class="links" href="https://twitter.com/neogcamp" target="_blank">
+            <img src="images/twitter.svg" alt="twitter" />
+          </a>
+        </li>
+        <li>
+          <a
+            class="links"
+            href="https://www.instagram.com/neogcamp"
+            target="_blank"
+          >
+            <img src="images/instagram.svg" alt="instagram" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
