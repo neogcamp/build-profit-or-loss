@@ -1,36 +1,42 @@
-const stockPrice = document.getElementById("users-stock-price");
-const quantityOfStock = document.getElementById("quantity-of-stock");
-const currentStockPrice = document.getElementById("current-stock-price");
-const btnCheck = document.getElementById("btn-check");
-const output = document.getElementById("output");
-const outputImg = document.getElementById("stock-img");
+// Step 1 - selecting all the elements
+var initialPrice = document.querySelector("#initial-price");
+var stocksQuantity = document.querySelector("#stocks-quantity");
+var currentPrice = document.querySelector("#current-price");
+var submitBtn = document.querySelector("#submit-btn");
+var outputBox = document.querySelector("#output-box");
 
-function calProfitAndLoss() {
-  const quantity = Number(quantityOfStock.value);
-  const costPrice = Number(stockPrice.value) * quantity;
-  const sellPrice = Number(currentStockPrice.value) * quantity;
+// Ex-06
+submitBtn.addEventListener("click", submitHandler);
 
-  if (
-    quantity === "" ||
-    stockPrice.value === "" ||
-    currentStockPrice.value === ""
-  ) {
-    output.innerHTML =
-      "All the fields are mandatory, please enter all the values!";
+function submitHandler() {
+  var ip = Number(initialPrice.value);
+  var qty = Number(stocksQuantity.value);
+  var curr = Number(currentPrice.value);
+
+  calculateProfitAndLoss(ip, qty, curr);
+}
+
+// Ex-05
+function calculateProfitAndLoss(initial, quantity, current) {
+  if (initial > current) {
+    var loss = (initial - current) * quantity;
+    var lossPercentage = (loss / initial) * 100;
+
+    showOutput(
+      `Hey, the loss is ${loss} and the percent is ${lossPercentage}%`
+    );
+  } else if (current > initial) {
+    var profit = (current - initial) * quantity;
+    var profitPercentage = (profit / initial) * 100;
+
+    showOutput(
+      `Hey, the profit is ${profit} and the percent is ${profitPercentage}%`
+    );
   } else {
-    const absolute = (sellPrice - costPrice).toFixed(2);
-    const percentage = ((absolute / costPrice) * 100).toFixed(2);
-
-    if (absolute > 0) {
-      output.innerText = `Congratulations! You gained ${percentage}%. Your total profit is ₹${absolute}`;
-      outputImg.src = "images/profit.png";
-    } else if (absolute == 0) {
-      output.innerHTML = "No profit or loss";
-    } else {
-      output.innerHTML = `Ohh no! You have lost ${-percentage}%. You total loss is ₹${-absolute}`;
-      outputImg.src = "images/loss.png";
-    }
+    showOutput(`No pain no gain and no gain no pain`);
   }
 }
 
-btnCheck.addEventListener("click", calProfitAndLoss);
+function showOutput(message) {
+  outputBox.innerHTML = message;
+}

@@ -12,7 +12,7 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  background: url(images/wave.svg) left top no-repeat;
+  text-align: center;
 }
 
 a {
@@ -26,126 +26,73 @@ li {
 /* Header */
 header h1 {
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem;
 }
 
-/* Main */
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 3rem auto;
-}
-
-/* left */
-
-.left-div {
-  /* padding: 0 12rem; */
-  padding-top: 2rem;
-  padding-left: 3rem;
+.input-label {
+  display: block;
+  font-size: larger;
+  margin: 2rem 0px;
+  font-weight: 600;
 }
 
 .input {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 500px;
-}
-
-.input-txt {
-  font-size: 14px;
+  font-size: large;
+  display: block;
   outline: #fff;
   padding: 0.6rem 1rem;
-  margin: 1rem;
+  margin: 1rem auto;
   border: 2px solid var(--primary-color);
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 300px;
-  box-shadow: 6.61px 6.61px 9px #e6eef5, -6.61px -6.61px 9px #faffff;
+  max-width: 325px;
 }
 
-.flt-label {
-  pointer-events: none;
-  font-size: larger;
-  color: var(--primary-color);
-}
-
-.btn {
+.btn-check {
   background: var(--primary-color);
   border: none;
   color: #fff;
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
   font-size: large;
-  margin: 1rem 38%;
   cursor: pointer;
   outline: #fff;
+  margin: auto;
+  display: block;
 }
 
 .output {
   font-size: x-large;
   font-weight: 600;
-}
-
-/* Right */
-img {
-  width: 600px;
+  margin: 2rem 0;
 }
 
 /* Footer */
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 8rem 2rem;
-  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 footer p {
   font-size: large;
+  text-align: center;
 }
 
-.inline-list {
-  display: flex;
-  gap: 1rem;
+.footer-list {
+  margin: 1rem;
 }
 
-footer img {
+a,
+img,
+li {
+  display: inline;
+}
+
+img {
   width: 40px;
-}
-
-@media screen and (max-width: 900px) {
-  body {
-    background-size: 60rem;
-  }
-
-  main {
-    flex-direction: column;
-  }
-  .left-div {
-    padding: 0;
-  }
-
-  .input {
-    width: auto;
-    flex-direction: column;
-  }
-  img {
-    width: 332px;
-  }
-
-  footer {
-    flex-direction: column;
-    margin: 0px 3rem 2rem;
-    gap: 1rem;
-  }
-
-  .output {
-    text-align: center;
-  }
-  .btn {
-    margin: 1rem 28%;
-  }
+  padding: 1rem 0.2rem;
 }

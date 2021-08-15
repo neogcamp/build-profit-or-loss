@@ -3,6 +3,9 @@
 A website which helps user with how much profit or loss he/she is making  through stocks in percentage &amp; absolute value.
 <br/>
 
+# Youtube Lesson
+[Link](https://youtu.be/P0dL7sl5jIc)
+
 # Problem Statement
 #### [**basics buildFive**](https://github.com/neogcamp/build/blob/main/basics/profit-or-loss.md)
 

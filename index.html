@@ -17,27 +17,35 @@
       <h1>Stock Profile & Loss Calculator</h1>
     </header>
     <main>
-      <div class="left-div">
-        <div class="input">
-          <p class="flt-label">Stock Price</p>
-          <input class="input-txt" type="number" id="users-stock-price" />
-        </div>
-        <div class="input">
-          <p class="flt-label">Quantity of Stock</p>
-          <input class="input-txt" type="number" id="quantity-of-stock" />
-        </div>
-        <div class="input">
-          <p class="flt-label">Current Price</p>
-          <input class="input-txt" type="number" id="current-stock-price" />
-        </div>
-        <div>
-          <button class="btn" id="btn-check">Calculate</button>
-        </div>
-        <p class="output" id="output"></p>
-      </div>
-      <div>
-        <img id="stock-img" src="./images/stocks.png" alt="" />
-      </div>
+      <label class="input-label" for="initial-price">
+        Intial Price
+        <input
+          class="input"
+          type="text"
+          id="initial-price"
+          placeholder="Enter Initial Price Here"
+      /></label>
+      <label class="input-label" for="stocks-quantity">
+        Quantity of Stocks
+        <input
+          class="input"
+          type="text"
+          id="stocks-quantity"
+          placeholder="Enter the Number of Stocks bought"
+        />
+      </label>
+      <label class="input-label" for="current-price"
+        >Current Price
+        <input
+          class="input"
+          type="text"
+          id="current-price"
+          placeholder="Enter the Current Price of the stocks"
+      /></label>
+
+      <button id="submit-btn" class="btn-check">Tell Me!!</button>
+
+      <div id="output-box" class="output"></div>
     </main>
     <footer>
       <p>© | 2021 | adarshbalika</p>
